@@ -1,0 +1,57 @@
+# Site
+name: 'Maked Simple'
+description: 'A Blog from Antonio De Vivo :)'
+logo: 'assets/images/logo.png'
+favicon: 'assets/images/favicon.ico'
+baseurl: ''
+email: 'antonio.devivo@yahoo.com'
+#mailchimp-list: '' #write here your mailchimp link list
+
+include: ["_pages"]
+permalink: /:title/
+
+# Plugins
+plugins: 
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-paginate
+  - jekyll-seo-tag
+  - jekyll-gist
+
+authors:
+
+    adevivo:
+      name:           adevivo
+      site:           https://antoniodevivo.com
+      avatar:         assets/images/avatar.jpg
+      bio:            "A passionate about world!"
+      linkedin:       https://www.linkedin.com/in/antonio-de-vivo/
+      email:          antonio.devivo@yahoo.com
+ 
+# Defaults
+defaults:
+
+  # all posts
+  - scope:
+      path: "_posts"
+    values:
+      layout: post
+      author: adevivo
+      avatar: assets/images/avatar.jpg
+      
+  # all pages
+  - scope:
+      path: "_pages"
+    values:
+      layout: page
+      
+# Syntax
+markdown: kramdown
+highlighter: rouge
+
+# Paginate
+paginate: 10
+
+
+# Exclude metadata and development time dependencies (like Grunt plugins)
+exclude: [README.markdown, package.json, grunt.js, Gruntfile.js, Gruntfile.coffee, node_modules]
